@@ -30,4 +30,20 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  application_name: Action Jackson
+  application:
+    name: Action Jackson
+    nav:
+      sign_out: Sign out
+  rooms:
+    index:
+      hi: Hi
+      users: Users
+      rooms: Rooms
+  sessions:
+    new:
+      title: Sign in
+    form:
+      sign_in: Sign in
+    flash:
+      sign_in: Successfully signed in as
+      sign_out: Successfully signed out
