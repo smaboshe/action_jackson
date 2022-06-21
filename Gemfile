@@ -69,9 +69,6 @@ group :development do
   # Ref: https://github.com/rspec/rspec-rails#installation
   gem "rspec-rails"
 
-  # Ref: https://github.com/thoughtbot/shoulda-matchers#getting-started
-  gem "shoulda-matchers"
-
   # Ref: https://github.com/bkeepers/dotenv#rails
   gem "dotenv-rails" # , groups: [:development, :test]
 
@@ -84,6 +81,9 @@ group :development do
 end
 
 group :test do
+  # Ref: https://github.com/thoughtbot/shoulda-matchers#getting-started
+  gem "shoulda-matchers"
+
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
