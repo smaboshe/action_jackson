@@ -37,7 +37,7 @@ gem "redis", "~> 4.0"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -50,7 +50,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "debug", platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
@@ -62,6 +62,25 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Ref: https://github.com/thoughtbot/factory_bot_rails#configuration
+  gem "factory_bot_rails"
+
+  # Ref: https://github.com/rspec/rspec-rails#installation
+  gem "rspec-rails"
+
+  # Ref: https://github.com/thoughtbot/shoulda-matchers#getting-started
+  gem "shoulda-matchers"
+
+  # Ref: https://github.com/bkeepers/dotenv#rails
+  gem "dotenv-rails" # , groups: [:development, :test]
+
+  # Use Standard for Ruby linting
+  # Ref: https://github.com/testdouble/standard
+  gem "standard" # , group: [:development, :test]
+
+  # https://github.com/Shopify/erb-lint#installation
+  gem "erb_lint", require: false
 end
 
 group :test do
