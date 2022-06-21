@@ -1,0 +1,7 @@
+<h1><%= t("sessions.new.title") %></h1>
+
+<%= form_with scope: :session, url: sign_in_path do |form| %>
+  <%= form.label :username %>
+  <%= form.text_field :username %>
+  <%= form.submit t("sessions.form.sign_in") %>
+<% end %>

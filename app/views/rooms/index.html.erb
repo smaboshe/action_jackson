@@ -1,0 +1,7 @@
+<div>
+  <h5><%= t("rooms.index.hi") %> <%= @current_user.username %></h5>
+  <h4><%= t("rooms.index.users") %></h4>
+  <%= render @users %>
+  <h4><%= t("rooms.index.rooms") %></h4>
+  <%= render @rooms %>
+</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= t("application_name") %></title>
+    <title><%= t("application.name") %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +12,20 @@
   </head>
 
   <body>
+    <% if flash.any? %>
+      <% flash.each do |type, msg| %>
+        <div>
+          <%= msg %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <% if current_user %>
+      <div>
+        <%= button_to t("application.nav.sign_out"), sign_out_path, method: :delete %>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
