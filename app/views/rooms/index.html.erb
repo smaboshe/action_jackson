@@ -1,13 +1,13 @@
 <div>
   <h5><%= t("rooms.index.hi") %> <%= @current_user.username %></h5>
 
-  <h4><%= t("rooms.index.users") %></h4>
+  <h4><%= t("rooms.index.users", number: @users.count) %></h4>
   <%= turbo_stream_from :users %>
   <div id="users">
     <%= render @users %>
   </div>
 
-  <h4><%= t("rooms.index.rooms") %></h4>
+  <h4><%= t("rooms.index.rooms", number: @rooms.count) %></h4>
   <%= turbo_stream_from :rooms %>
   <div id="rooms">
     <%= render @rooms %>

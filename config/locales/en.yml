@@ -37,8 +37,8 @@ en:
   rooms:
     index:
       hi: Hi
-      users: Users
-      rooms: Rooms
+      users: "Users (%{number})"
+      rooms: "Rooms (%{number})"
   sessions:
     new:
       title: Sign in
